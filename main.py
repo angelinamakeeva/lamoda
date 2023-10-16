@@ -15,3 +15,8 @@ for product in products:
 brands = soup.find_all("div", class_="x-product-card-description__brand-name")
 for brand in brands:
     print(brand.text)
+
+prices = soup.find_all("div", class_="x-product-card-description__microdata-wrap")
+for price in prices:
+    print(price.text)
+
