@@ -1,16 +1,7 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import requests
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+url = 'https://www.lamoda.ru/catalogsearch/result/?q=%D0%BA%D1%83%D1%80%D1%82%D0%BA%D0%B0%20%D0%B7%D0%B8%D0%BC%D0%BD%D1%8F%D1%8F%20%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F&&submit=y&page=1'
+r = requests.get(url)
+text = r.text
+print(text)
