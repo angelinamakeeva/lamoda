@@ -1,9 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://www.lamoda.ru/catalogsearch/result/?q=%D0%BA%D1%83%D1%80%D1%82%D0%BA%D0%B0%20%D0%B7%D0%B8%D0%BC%D0%BD%D1%8F%D1%8F%20%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F&&submit=y&page=1'
+url = 'https://www.lamoda.ru/catalogsearch/result/?q=nike%20jordan&submit=y&gender_section=women'
 r = requests.get(url)
 text = r.text
 print(text)
 
 soup = BeautifulSoup(r.text, "html.parser")
+
+products = soup.find_all("div", class_="x-product-card-description__product-name")
+for product in products:
+    print(product.text)
