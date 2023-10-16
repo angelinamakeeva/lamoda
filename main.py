@@ -11,3 +11,7 @@ soup = BeautifulSoup(r.text, "html.parser")
 products = soup.find_all("div", class_="x-product-card-description__product-name")
 for product in products:
     print(product.text)
+
+brands = soup.find_all("div", class_="x-product-card-description__brand-name")
+for brand in brands:
+    print(brand.text)
