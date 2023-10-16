@@ -5,3 +5,5 @@ url = 'https://www.lamoda.ru/catalogsearch/result/?q=%D0%BA%D1%83%D1%80%D1%82%D0
 r = requests.get(url)
 text = r.text
 print(text)
+
+soup = BeautifulSoup(r.text, "html.parser")
