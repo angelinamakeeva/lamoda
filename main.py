@@ -1,3 +1,6 @@
+Kareva Alena: 20%
+
+
 import requests
 from bs4 import BeautifulSoup
 
